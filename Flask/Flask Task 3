@@ -1,0 +1,25 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/table', methods=['POST'])
+def generate_table():
+    try:
+        data = request.get_json()
+        number = data.get('number')
+        
+        if number is None:
+            return jsonify({"error": "Please provide a number in the request body"}), 400
+
+        table = []
+        for i in range(1, 11):
+            result = number * i
+            table.append({f"{number} x {i}": result})
+
+        return jsonify({"table": table})
+
+    except Exception as e:
+        return jsonify({"error": "Error occurred while generating the table"}), 500
+
+if __name__ == '__main__':
+    app.run(debug=True)
