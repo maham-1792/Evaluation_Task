@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Generator API</title>
+</head>
+<body>
+<h1>Generate Table of a Number</h1>
+<form method="post">
+    <label for="number">Enter a number:</label>
+    <input type="number" name="number" required>
+    <button type="submit">Generate Table</button>
+</form>
+{% if table_data %}
+    <h2>Table of {{ number }}</h2>
+    <table>
+        <tr>
+            <th>Multiplier</th>
+            <th>Result</th>
+        </tr>
+        {% for multiplier, result in table_data %}
+        <tr>
+            <td>{{ multiplier }}</td>
+            <td>{{ result }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+</body>
+</html>
