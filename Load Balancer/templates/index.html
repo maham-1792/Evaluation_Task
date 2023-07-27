@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .form-heading {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .form-subheading {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-top: 30px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-input {
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .form-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center form-heading">Model Load:</h1>
+    <h1 class="text-center form-subheading">Request for Processing:</h1>
+    <form class="text-center">
+        <div class="form-group">
+            <label for="model" class="form-label">Model Name:</label>
+            <input type="text" class="form-control form-input" id="model" name="model" required>
+        </div>
+        <button type="submit" class="btn btn-primary form-button">Processing</button>
+    </form>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
