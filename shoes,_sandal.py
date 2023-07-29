@@ -80,3 +80,5 @@ for root, _, files in os.walk(extracted_dir):
 
 # Clean up the temporary extracted directory
 shutil.rmtree(extracted_dir)
+
+model.summary()
